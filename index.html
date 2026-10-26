@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hodinářství Praha 8 – servis, prodej a výkup hodinek | Pražské hodinářství</title>
+<meta name="description" content="Pražské hodinářství, Zenklova 11/62, Praha 8. Servis a renovace hodinek, prodej Rolex a dalších značek, výkup a zástava hodinek, zakázková výroba šperků. Po–Pá 9–17.">
+<meta property="og:title" content="Pražské hodinářství – servis, prodej a výkup hodinek">
+<meta property="og:image" content="https://prazskehodinarstvi.cz/assets/dist/images/hodinarstvi_fb.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="preload" as="image" href="https://prazskehodinarstvi.cz/assets/dist/images/slider-01.jpg" fetchpriority="high">
+<style>
+@font-face{font-family:"Flink";font-weight:400;font-display:swap;src:url(fonts/FLINK-REGULAR.woff) format("woff")}
+@font-face{font-family:"Flink";font-weight:500;font-display:swap;src:url(fonts/FLINK-MEDIUM.woff) format("woff")}
+@font-face{font-family:"Flink";font-weight:300;font-display:swap;src:url(fonts/FLINK-LIGHT.woff) format("woff")}
+:root{--gold:#ac9659;--ink:#212529;--black:#000;--white:#fff;--pad:16px;--bar:64px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font:400 16px/1.55 "Flink",sans-serif;color:var(--ink);background:#fff;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-weight:500;text-transform:uppercase;margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{padding:0 var(--pad);max-width:1180px;margin:auto}
+.pattern{background:url(https://prazskehodinarstvi.cz/assets/dist/images/pattern_background.jpg)}
+section{padding:48px 0}
+h2{font-size:26px;letter-spacing:2px;text-align:center;padding-bottom:14px;margin-bottom:28px;position:relative}
+h2::after{content:"";position:absolute;left:50%;bottom:0;width:96px;height:2px;margin-left:-48px;background:var(--gold)}
+.dark h2{color:#fff}
+.lead{max-width:640px;margin:-12px auto 28px;text-align:center}
+
+/* notice */
+.notice{background:var(--gold);color:#000;font-size:14px;padding:8px var(--pad);display:flex;gap:12px;justify-content:center;align-items:center;text-align:center}
+.notice[hidden]{display:none}
+.notice button{background:none;border:0;font-size:22px;line-height:1;cursor:pointer;min-width:44px;min-height:44px;margin:-10px -10px -10px 0}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo img{height:46px;width:auto}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.icon-btn{width:48px;height:48px;border:1px solid #000;background:#fff;display:grid;place-items:center;cursor:pointer;text-decoration:none}
+.icon-btn.gold{background:var(--gold);border-color:var(--gold)}
+.icon-btn svg{width:22px;height:22px}
+.menu{position:fixed;inset:68px 0 0;background:#000;z-index:40;padding:24px var(--pad) calc(var(--bar) + 24px);display:none;flex-direction:column;gap:4px;overflow:auto}
+.menu.open{display:flex}
+.menu a.l{color:#fff;text-decoration:none;font-weight:500;text-transform:uppercase;font-size:22px;padding:14px 0;border-bottom:1px solid #333;min-height:48px}
+.menu .meta{color:#ccc;margin-top:20px;font-size:15px}
+.desk-links{display:none}
+
+/* buttons */
+.btn{display:flex;align-items:stretch;justify-content:space-between;background:#fff;color:var(--ink);text-decoration:none;text-transform:uppercase;letter-spacing:1px;border:1px solid #fff;min-height:52px;cursor:pointer;font:inherit;text-align:left;width:100%;max-width:420px}
+.btn span.t{padding:14px 18px;align-self:center}
+.btn .a{width:62px;background:var(--gold);display:grid;place-items:center;clip-path:polygon(22px 0,100% 0,100% 100%,0 100%);flex:none}
+.btn .a svg{width:24px;height:24px;fill:#fff;margin-left:10px}
+.btn.line{background:transparent;color:#fff;border-color:var(--gold)}
+.btn.ink{border-color:#000}
+.center{display:flex;justify-content:center;margin-top:28px}
+
+/* hero */
+.hero{position:relative;color:#fff;background:#000 url(https://prazskehodinarstvi.cz/assets/dist/images/slider-01.jpg) center/cover;padding:0}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.62),rgba(0,0,0,.9))}
+.hero .wrap{position:relative;padding-top:56px;padding-bottom:28px}
+.hero h1{font-size:30px;line-height:1.15;letter-spacing:2px;margin-bottom:14px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{margin:0 0 24px;font-weight:400;font-size:17px;max-width:520px;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quick a{display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;min-height:84px;box-shadow:0 4px 18px rgba(0,0,0,.45);text-decoration:none;text-transform:uppercase;letter-spacing:1px;font-size:14px;font-weight:500;padding:10px;text-align:center}
+.quick .call{background:var(--gold);color:#000}
+.quick .nav-b{background:#fff;color:#000}
+.quick svg{width:24px;height:24px}
+.status{display:flex;align-items:center;gap:12px;background:#000;border:1px solid var(--gold);margin-top:10px;padding:14px 16px;font-size:18px;min-height:64px}
+.dot{width:14px;height:14px;border-radius:50%;background:#e0584f;flex:none;box-shadow:0 0 0 4px rgba(224,88,79,.25)}
+.status.open .dot{background:#4cc36b;box-shadow:0 0 0 4px rgba(76,195,107,.3)}
+.status b{font-weight:500;text-transform:uppercase;letter-spacing:1px}
+.status small{display:block;color:#ddd;font-size:14px;margin-top:2px}
+
+/* about */
+#about p{max-width:680px;margin:0 auto 14px;text-align:center;font-size:18px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:28px auto 0;max-width:680px;text-align:center}
+.facts b{display:block;font-weight:500;font-size:26px;color:var(--gold);letter-spacing:1px}
+.facts span{font-size:13px;text-transform:uppercase;letter-spacing:1px}
+
+/* offers carousel */
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 12px;margin:0 calc(var(--pad) * -1);scrollbar-width:thin;scrollbar-color:var(--gold) #eee;-webkit-overflow-scrolling:touch}
+.card{flex:0 0 78%;max-width:340px;scroll-snap-align:center;background:#000;color:#fff;display:flex;flex-direction:column;text-decoration:none;position:relative}
+.card .ph{aspect-ratio:1/1;background:#111;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{color:var(--gold);font-size:16px;letter-spacing:1px}
+.card p{margin:0;font-size:14px;color:#ddd;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.price{margin-top:auto;font-size:20px;font-weight:500;letter-spacing:.5px}
+.price s{font-size:14px;color:#aaa;font-weight:400;margin-right:8px}
+.more{display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:1px;font-size:14px;min-height:44px}
+.more svg{width:22px;height:22px;fill:var(--gold)}
+.badge{position:absolute;top:12px;left:0;background:var(--gold);color:#000;padding:4px 12px 4px 10px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;z-index:2}
+.badge.sold{background:#fff}
+.card.sold .ph img{filter:grayscale(1) brightness(.7)}
+.hint{text-align:center;font-size:13px;color:#777;margin:4px 0 0;text-transform:uppercase;letter-spacing:1px}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{position:relative;aspect-ratio:1/1;border:0;padding:0;background:#000;cursor:pointer;overflow:hidden;color:#fff;font:inherit;text-align:left}
+.tile img{width:100%;height:100%;object-fit:cover;opacity:.92}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;background:#000;padding:10px 10px 10px 12px;display:flex;justify-content:space-between;align-items:center;gap:6px;text-transform:uppercase;font-size:13px;line-height:1.25;font-weight:500;letter-spacing:.5px;min-height:56px}
+.tile .cap svg{width:20px;height:20px;fill:var(--gold);flex:none}
+.sub{display:flex;align-items:center;gap:12px;margin:36px 0 16px}
+.sub:first-of-type{margin-top:0}
+
+/* work rail */
+.work{flex:0 0 72%;max-width:300px;scroll-snap-align:center;background:#fff}
+.work img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.work h3{font-size:13px;letter-spacing:1px;padding:12px;line-height:1.35}
+
+/* split dark sections */
+.dark{background:#000;color:#fff}
+.dark .tile{background:#111}
+.dark .tile .cap{background:#111}
+
+/* contact */
+#contacts{background:#000;color:#fff;padding-bottom:40px}
+.contact-grid{display:grid;gap:28px}
+.info{display:grid;gap:18px}
+.info .row{display:flex;gap:14px;align-items:flex-start}
+.info .ic{width:44px;height:44px;border-radius:50%;background:var(--gold);display:grid;place-items:center;flex:none}
+.info .ic svg{width:22px;height:22px;fill:#000}
+.info a{text-decoration:none;font-size:20px;font-weight:500;letter-spacing:.5px;display:inline-block;padding:10px 0;min-height:44px}
+.info .sm{font-size:15px;color:#ccc;display:block}
+.hours{border-collapse:collapse;width:100%;max-width:340px;margin-top:6px;font-size:15px}
+.hours td{padding:6px 0;border-bottom:1px solid #333}
+.hours tr.today td{color:var(--gold);font-weight:500}
+.hours td:last-child{text-align:right}
+.cta{display:grid;gap:10px}
+.maps{aspect-ratio:4/3;border:0;width:100%;filter:grayscale(.2)}
+.alt{font-size:14px;color:#ccc}
+.alt a{text-underline-offset:4px;text-decoration-color:var(--gold);display:inline-block;padding:13px 6px}
+.socials{display:flex;gap:10px;margin-top:6px}
+.socials a{width:48px;height:48px;border:1px solid var(--gold);display:grid;place-items:center}
+.socials img{width:22px;height:22px}
+footer{background:#000;color:#999;font-size:14px;padding:18px var(--pad) 24px;border-top:1px solid #222;text-align:center}
+footer a{margin:0 10px;display:inline-block;padding:14px 0}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#000;border-top:2px solid var(--gold);display:grid;grid-template-columns:1fr 1fr 1fr;padding-bottom:env(safe-area-inset-bottom)}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:var(--bar);color:#fff;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:1px;font-weight:500;padding:6px 4px;text-align:center;line-height:1.2}
+.bar a+a{border-left:1px solid #333}
+.bar svg{width:22px;height:22px;fill:var(--gold)}
+.bar .st{font-size:11px;font-weight:400;letter-spacing:.3px;text-transform:none;color:#ccc}
+.bar a.primary{background:var(--gold);color:#000}
+.bar a.primary svg{fill:#000}
+
+/* dialog */
+dialog{border:0;padding:0;max-width:560px;width:calc(100% - 24px);max-height:calc(100dvh - 24px);overflow:auto;background:#fff;color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+dialog img{width:100%;aspect-ratio:16/10;object-fit:cover}
+dialog .in{padding:22px 20px 26px}
+dialog h3{font-size:20px;letter-spacing:1.5px;padding-bottom:12px;margin-bottom:14px;border-bottom:2px solid var(--gold);display:inline-block}
+dialog p{margin:0 0 18px}
+dialog .x{position:absolute;top:8px;right:8px;width:48px;height:48px;border:0;background:#fff;font-size:28px;cursor:pointer;line-height:1}
+dialog .btn{max-width:none}
+
+@media (min-width:768px){
+ :root{--pad:32px}
+ body{padding-bottom:0}
+ .bar{display:none}
+ .menu{display:none!important}
+ .icon-btn.burger{display:none}
+ .desk-links{display:flex;gap:26px}
+ .desk-links a{text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.5px;padding:12px 0;font-size:15px}
+ .desk-links a:hover{color:var(--gold)}
+ .nav-actions .tel{width:auto;padding:0 16px;gap:8px;display:flex}
+ .hero .wrap{padding-top:110px;padding-bottom:70px}
+ .hero h1{font-size:46px;max-width:760px}
+ .quick{grid-template-columns:repeat(3,minmax(0,220px))}
+ .status{max-width:520px}
+ .quick{margin-bottom:0}
+ .rail{margin:0;padding:0 0 14px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;overflow:visible}
+ .rail#workRail{grid-template-columns:repeat(3,1fr)}
+ .card,.work{max-width:none}
+ .hint{display:none}
+ .tiles{grid-template-columns:repeat(3,1fr);gap:16px}
+ .contact-grid{grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+ h2{font-size:30px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="notice" id="notice" data-until="2026-10-22" hidden>
+  <span><b>Otevírací doba 22. 10.:</b> dnes z technických důvodů otevřeno do 12:30. V pondělí opět od 9:00.</span>
+  <button type="button" aria-label="Zavřít oznámení" id="noticeX">×</button>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Pražské hodinářství – nahoru"><img src="https://prazskehodinarstvi.cz/assets/dist/images/logo.svg" alt="Pražské hodinářství" width="130" height="46"></a>
+    <nav class="desk-links" aria-label="Hlavní navigace">
+      <a href="#offers">Nabídka</a><a href="#servis">Servis</a><a href="#pawn">Výkup</a><a href="#goldsmith">Zlatnictví</a><a href="#contacts">Kontakt</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn gold tel" href="tel:+420601333999" aria-label="Zavolat +420 601 333 999">
+        <svg viewBox="0 0 24 24" fill="#000"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      </a>
+      <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menu">
+  <a class="l" href="#about">O nás</a>
+  <a class="l" href="#offers">Nabídka hodinek</a>
+  <a class="l" href="#servis">Servis</a>
+  <a class="l" href="#prace">Naše práce</a>
+  <a class="l" href="#pawn">Výkup a zástava</a>
+  <a class="l" href="#goldsmith">Zlatnictví</a>
+  <a class="l" href="#contacts">Kontakty</a>
+  <div class="meta">Zenklova 11/62, Praha 8<br>Po–Pá 9–17 · <a href="tel:+420601333999">+420 601 333 999</a></div>
+</nav>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <h1 id="h1">Hodinářství <em>v Praze</em></h1>
+    <p>Servis a renovace hodinek, prodej Rolex a dalších značek, výkup a zástava hodinek. Rodinný podnik s tradicí.</p>
+    <div class="quick">
+      <a class="call" href="tel:+420601333999"><svg viewBox="0 0 24 24" fill="#000"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zavolat</a>
+      <a class="nav-b" href="https://maps.google.com/maps/dir/?api=1&travelmode=driving&destination=50.108902,14.472541" rel="noopener"><svg viewBox="0 0 24 24" fill="#000"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Navigovat</a>
+    </div>
+    <div class="status" id="status" role="status"><span class="dot"></span><span><b id="stTxt">Zenklova 11/62, Praha 8</b><small id="stSub">Po–Pá 9–17 hodin</small></span></div>
+  </div>
+</section>
+
+<section id="about" class="pattern">
+  <div class="wrap">
+    <h2>O nás</h2>
+    <p>Jsme Pražské hodinářství; ryze český rodinný podnik s mnohaletou tradicí. Řídíme se mottem Tomáše Bati <b>„Náš zákazník – náš pán“</b> a snažíme se, aby bylo každý den vidět, že nás naše práce baví.</p>
+    <p>Zajišťujeme záruční i pozáruční servis na té nejvyšší úrovni, zakázkovou výrobu šperků a zlatnické opravy s více než 30letou tradicí. K zákazníkům přistupujeme vždy individuálně a především poctivě.</p>
+    <div class="facts"><div><b>30+</b><span>let zlatnictví</span></div><div><b>150+</b><span>řemenů skladem</span></div><div><b>1 %</b><span>týdně zástava od</span></div></div>
+  </div>
+</section>
+
+<section id="offers" aria-labelledby="offersH">
+  <div class="wrap">
+    <h2 id="offersH">Aktuální nabídka hodinek</h2>
+    <div class="rail" tabindex="0" aria-label="Nabídka hodinek – posouvejte do stran">
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/106-rolex-datejust-41-mint-green"><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/106/small/rolex-datejust-41-mint-green-106.jpg" alt="Rolex Datejust 41 Mint Green" width="500" height="500" loading="lazy"></div><div class="body"><h3>Rolex Datejust 41 Mint Green</h3><p>Nejpoptávanější a nejméně dostupná barva Mint Green. Luneta z 18karátového bílého zlata. Ročník 2026, záruka Rolex. Skladem.</p><div class="price">389.500,-</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/105-rolex-submariner-41-starbucks"><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/105/small/rolex-submariner-41-starbucks-105.jpg" alt="Rolex Submariner 41 Starbucks" width="500" height="500" loading="lazy"></div><div class="body"><h3>Rolex Submariner 41 Starbucks</h3><p>Vzácné provedení Starbucks se zelenou keramickou lunetou. Nové hodinky, ročník 2026, záruka Rolex. Dodání 7–10 dnů.</p><div class="price">399.500,-</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/104-rolex-submariner-41-date"><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/104/small/rolex-submariner-41-104.jpg" alt="Rolex Submariner 41 Date" width="500" height="500" loading="lazy"></div><div class="body"><h3>Rolex Submariner 41 Date</h3><p>Provedení s černou keramickou lunetou. Nové hodinky, ročník 2026, záruka Rolex. Skladem, ihned k dispozici.</p><div class="price">365.000,-</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/111-breguet-marine"><span class="badge">−24 %</span><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/111/small/breguet-marine-111.jpg" alt="Breguet Marine" width="500" height="500" loading="lazy"></div><div class="body"><h3>Breguet Marine</h3><p>Napoleon Bonaparte, Winston Churchill, Giuseppe Verdi, Victor Hugo… Všechny spojuje jedno: byli zákazníky Abrahama Louise Breguet.</p><div class="price"><s>328.700,-</s>249.500,-</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/109-breitling-datora-42-b25"><span class="badge">Sleva 20 %+</span><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/109/small/breitling-datora-42-b25-109.jpg" alt="Breitling Datora 42 B25" width="500" height="500" loading="lazy"></div><div class="body"><h3>Breitling Datora 42 B25</h3><p>Manufakturní stroj s kompletním kalendářem, měsíční fází a chronografem. Lososový číselník, řemen z aligátora.</p><div class="price">Cena na dotaz</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/94-iwc-big-pilot-s-watch-43"><span class="badge">−19 %</span><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/94/small/iwc-big-pilot-s-watch-43-94.jpg" alt="IWC Big Pilot’s Watch 43" width="500" height="500" loading="lazy"></div><div class="body"><h3>IWC Big Pilot’s Watch 43</h3><p>Nádherné modré provedení, k dispozici právě nyní v Pražském hodinářství.</p><div class="price"><s>270.000,-</s>219.500,-</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card" href="https://prazskehodinarstvi.cz/produkty/detail/83-eterna-legacy-date-silver"><span class="badge">−50 %</span><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/83/small/eterna-legacy-date-silver-83.jpg" alt="Eterna Legacy Date Silver" width="500" height="500" loading="lazy"></div><div class="body"><h3>Eterna Legacy Date Silver</h3><p>Pánské společenské hodinky s klasickými liniemi, pouzdro 41,5 mm, stříbrný číselník.</p><div class="price"><s>59.100,-</s>29.500,-</div><span class="more">Více zde <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+      <a class="card sold" href="https://prazskehodinarstvi.cz/produkty/detail/96-zenith-chronomaster-sport-rose-gold"><span class="badge sold">Prodáno</span><div class="ph"><img src="https://prazskehodinarstvi.cz/data/produkty/96/small/zenith-chronomaster-sport-rose-gold-96.jpg" alt="Zenith Chronomaster Sport Rose Gold – prodáno" width="500" height="500" loading="lazy"></div><div class="body"><h3>Zenith Chronomaster Sport Rose Gold</h3><p>Plášť z 18karátového růžového zlata. Tento kus už má nového majitele.</p><div class="price"><s>552.400,-</s>Prodáno</div><span class="more">Detail <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></div></a>
+    </div>
+    <p class="hint">← posuňte →</p>
+    <div class="center"><a class="btn ink" href="https://prazskehodinarstvi.cz/produkty/"><span class="t">Zobrazit kompletní nabídku</span><span class="a"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></a></div>
+  </div>
+</section>
+
+<section id="servis" class="pattern" aria-labelledby="servisH">
+  <div class="wrap">
+    <h2 id="servisH">Hodinářský servis</h2>
+    <div class="tiles" data-group="servis"></div>
+  </div>
+</section>
+
+<section id="prace" aria-labelledby="praceH">
+  <div class="wrap">
+    <h2 id="praceH">Naše práce</h2>
+    <div class="rail" tabindex="0" aria-label="Ukázky prací – posouvejte do stran" id="workRail"></div>
+    <p class="hint">Kompletní galerie s fotkami před a po je na původním webu</p>
+  </div>
+</section>
+
+<section id="pawn" class="dark" aria-labelledby="pawnH">
+  <div class="wrap">
+    <h2 id="pawnH">Výkup a zástava hodinek</h2>
+    <div class="tiles" data-group="pawn"></div>
+  </div>
+</section>
+
+<section id="goldsmith" aria-labelledby="goldH">
+  <div class="wrap">
+    <h2 id="goldH">Zlatnictví</h2>
+    <p class="lead">Šperky nepřeprodáváme, vyrábíme je v České republice již téměř 30 let.</p>
+    <div class="tiles" data-group="gold"></div>
+  </div>
+</section>
+
+<section id="contacts" aria-labelledby="contH">
+  <div class="wrap">
+    <h2 id="contH" style="color:#fff">Kontakty</h2>
+    <div class="contact-grid">
+      <div class="info">
+        <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span><div><a href="https://maps.google.com/maps/dir/?api=1&travelmode=driving&destination=50.108902,14.472541">Zenklova 11/62<span class="sm">180 00 Praha 8</span></a></div></div>
+        <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><div><a href="tel:+420601333999">+420 601 333 999</a></div></div>
+        <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.500L4 7.500V8l8 5 8-5v-.5z"/></svg></span><div><a href="mailto:info@prazskehodinarstvi.cz" style="font-size:17px;word-break:break-all">info@prazskehodinarstvi.cz</a></div></div>
+        <div>
+          <b style="font-weight:500;text-transform:uppercase;letter-spacing:1px">Otevírací doba</b>
+          <table class="hours" id="hours"><tbody>
+            <tr data-d="1"><td>Pondělí</td><td>9–17</td></tr><tr data-d="2"><td>Úterý</td><td>9–17</td></tr><tr data-d="3"><td>Středa</td><td>9–17</td></tr><tr data-d="4"><td>Čtvrtek</td><td>9–17</td></tr><tr data-d="5"><td>Pátek</td><td>9–17</td></tr><tr data-d="6"><td>Sobota</td><td>zavřeno</td></tr><tr data-d="0"><td>Neděle</td><td>zavřeno</td></tr>
+          </tbody></table>
+        </div>
+        <div class="socials"><a href="https://www.facebook.com/prazskehodinarstvi/" aria-label="Facebook" rel="noopener"><img src="https://prazskehodinarstvi.cz/assets/dist/images/icon_facebook.svg" alt="" width="22" height="22"></a><a href="https://www.instagram.com/prazskehodinarstvi/" aria-label="Instagram" rel="noopener"><img src="https://prazskehodinarstvi.cz/assets/dist/images/icon_instagram.svg" alt="" width="22" height="22"></a></div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://maps.google.com/maps/dir/?api=1&travelmode=driving&destination=50.108902,14.472541"><span class="t">Navigovat autem</span><span class="a"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></a>
+        <a class="btn line" href="tel:+420601333999"><span class="t">Zavolat do hodinářství</span><span class="a"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></a>
+        <p class="alt">Jinou aplikaci? <a href="https://mapy.com/cs/zakladni?q=50.108902%2C14.472541&z=17">Mapy.com</a> · <a href="https://maps.apple.com/?daddr=50.108902,14.472541">Apple Mapy</a></p>
+        <iframe class="maps" title="Mapa – Pražské hodinářství, Zenklova 11/62" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=50.108902,14.472541&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © Pražské hodinářství s.r.o. · <a href="https://prazskehodinarstvi.cz/data/obchodni_podminky.pdf">Obchodní podmínky</a><a href="https://prazskehodinarstvi.cz/data/gdpr.pdf">Ochrana osobních údajů</a>
+</footer>
+
+<div class="bar" role="navigation" aria-label="Rychlé akce">
+  <a class="primary" href="tel:+420601333999"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zavolat</a>
+  <a href="https://maps.google.com/maps/dir/?api=1&travelmode=driving&destination=50.108902,14.472541"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Navigovat</a>
+  <a href="#contacts"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v5.400l4.500 2.700-.8 1.300L11 13V7z"/></svg><span id="barSt">Otevírací doba</span></a>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlgT">
+  <button class="x" type="button" aria-label="Zavřít" id="dlgX">×</button>
+  <img id="dlgImg" alt="" width="800" height="500">
+  <div class="in"><h3 id="dlgT"></h3><p id="dlgP"></p>
+    <a class="btn ink" href="tel:+420601333999"><span class="t">Domluvit se telefonicky</span><span class="a"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></span></a>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["LocalBusiness","JewelryStore"],"name":"Pražské hodinářství","url":"https://prazskehodinarstvi.cz/","telephone":"+420601333999","email":"info@prazskehodinarstvi.cz","image":"https://prazskehodinarstvi.cz/assets/dist/images/hodinarstvi_fb.jpg","address":{"@type":"PostalAddress","streetAddress":"Zenklova 11/62","postalCode":"180 00","addressLocality":"Praha 8","addressCountry":"CZ"},"geo":{"@type":"GeoCoordinates","latitude":50.108902,"longitude":14.472541},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"}],"sameAs":["https://www.facebook.com/prazskehodinarstvi/","https://www.instagram.com/prazskehodinarstvi/"]}
+</script>
+
+<script>
+const IMG="https://prazskehodinarstvi.cz/assets/dist/images/";
+const ARROW='<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>';
+const ITEMS={
+ servis:[
+  ["Výměny baterií","vymeny_baterii.jpg","Často se setkáváme s tím, kdy k nám přijde zákazník s hodinkami, ve kterých je silou „nacpaná“ zcela špatný typ baterie nebo ta nejlevnější čínská. My používáme pouze to, co chceme mít sami v hodinkách. Švýcarské baterie Renata jsou naprostou špičkou, kterou používají například značky Omega, Longines, Tag Heuer a další."],
+  ["Test vodotěsnosti","test_vodotesnosti.jpg","Tlaková zkouška vodotěsnosti je nezbytná pro Váš klid v případě, že jsou Vaše hodinky vodotěsné a nechcete riskovat jejich poškození vniknutím vody. Provádíme ji samostatně, ve spojení s výměnou baterie a přetěsněním pouzdra, nebo v rámci každého servisu mechanických hodinek."],
+  ["Výměny skel","vymeny_skel.jpg","Výměna skla je jeden z běžných úkonů opravdového hodinářství. Nabídnout Vám můžeme plastová, minerální nebo safírová skla. Kromě průměru a výšky skla záleží také na jeho tvaru (zahnutí). Pro zachování správného vzhledu a funkčnosti hodinek se na nás neváhejte obrátit."],
+  ["Opravy mechanických hodinek","opravy_mechanickych.jpg","Servis mechanických hodinek je dřina, ale výsledek za to stojí. Při celkovém servisu jsou hodinky rozebrány do posledního šroubku, každý díl je zkontrolován a v případě potřeby vyměněn. V rámci opravy je můžeme také vyleštit, popřípadě nově pozlatit. Používáme originální díly dle servisních manuálů výrobců."],
+  ["Kompletní renovace","kompletni_renovace.jpg","Celkovou renovací hodinek Vás provedeme od začátku do konce. Preferujete zachování autentického vzhledu, nebo chcete hodinky „jako nové“? Naší prioritou je individuální přístup a Vaše maximální spokojenost. Některé hodinky se v rodině dědí po generace a naším úkolem je, abyste toto dědictví s hrdostí předali dál."],
+  ["Prodej kožených řemenů","prodej_reminku.jpg","Skladem máme přes 150 kusů kožených řemenů od italské společnosti Moralleto, nebo Vám ve spolupráci se Zrno's custom leathercraft ušijeme řemen na míru. K dispozici jsou řemeny z klasické hověziny i exotické kůže, například ještěrka, pštros nebo aligátor."]
+ ],
+ pawn:[
+  ["Výkup hodinek za hotové","vykup_hodinek.jpg","Za Vaše hodinky nabízíme nejlepší možnou cenu na trhu. Očekávejte férové jednání, odborné ocenění, vyplacení celé částky ihned v hotovosti a flexibilitu, kdy za Vámi rádi přijedeme. Žádné zdlouhavé jednání, oboustranná spokojenost je naší prioritou."],
+  ["Komisní prodej","komisni_prodej.jpg","Pomůžeme Vám s prodejem stávajících hodinek formou komisního prodeje s provizí již od 10 %. V případě potřeby před profesionálním focením zajistíme servis hodinek nebo renovaci povrchu. Provizi platíte pouze v případě úspěšného prodeje, žádné fixní poplatky za vystavení zboží."],
+  ["Zástava hodinek","zastava_hodinek.jpg","Potřebujete na přechodné období hotovost? Nabízíme seriózní a diskrétní jednání v kamenném hodinářství. Zástavní smlouva s úrokem od 1 % týdně je standardně uzavřena na jeden kalendářní měsíc, lze se ale domluvit i na týdenní smlouvě nebo měsíční smlouvu opakovaně prodloužit."]
+ ],
+ gold:[
+  ["Zakázková výroba šperků","vyroba_sperku.jpg","Šperky nepřeprodáváme, ale vyrábíme v České republice již téměř 30 let. Specializujeme se na ruční výrobu šperků ze zlata a platiny, obvykle v kombinaci s drahokamy. I přes dlouholetou tradici pracujeme s nejmodernějšími technologiemi, jako jsou 3D návrhy a zkušební odlitky."],
+  ["Snubní prsteny","snubni_prsteny.jpg","Všechny snubní prsteny vznikají od návrhu až po výrobu v naší dílně. Vy zcela rozhodujete o vzhledu prstenů, které Vás budou provázet ve Vaší nové životní etapě. My budeme pouze Vašimi průvodci, aby pro Vás byl tento zážitek příjemný a nezapomenutelný."],
+  ["Zlatnické opravy","zlatnicke_opravy.jpg","Máte doma poškozený šperk? Nezoufejte. Opravy provádíme tak, abychom zachovali původní vzhled šperků. Pracujeme s bílým, žlutým, červeným i růžovým zlatem. Roztržený řetízek, zvětšení prstenu, předělání zděděných šperků – těšíme se na Vaši návštěvu."]
+ ]
+};
+const WORK=[["b1-7002.jpg",12,"Celkový servis a renovace povrchu Breitling"],["6-3226.jpg",11,"Výměna číselníku Rolex Daytona"],["123668873-823452095145458-295482758584106275-n-4944.jpg",10,"Renovace povrchu Rolex Datejust"],["130902062-855485638608770-4971113907434383867-n-1352.jpg",9,"Servis stroje IWC Portuguese 7 Days"],["138097242-874167160073951-2581392642062762125-n-9908.jpg",8,"Renovace povrchu Porsche Design Orfina"],["5-1815.jpg",7,"Celková oprava Cartier Santos"]];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const dlg=$('#dlg');
+
+for(const g in ITEMS){
+  const box=$(`[data-group="${g}"]`);
+  box.innerHTML=ITEMS[g].map((it,i)=>`<button class="tile" type="button" data-g="${g}" data-i="${i}"><img src="${IMG}${it[1]}" alt="" width="800" height="800" loading="lazy"><span class="cap">${it[0]}${ARROW}</span></button>`).join('');
+}
+$('#workRail').innerHTML=WORK.map(w=>`<figure class="work" style="margin:0"><img src="https://prazskehodinarstvi.cz/data/galerie/${w[1]}/small/${w[0]}" alt="${w[2]}" width="400" height="300" loading="lazy"><h3>${w[2]}</h3></figure>`).join('');
+
+document.addEventListener('click',e=>{
+  const t=e.target.closest('.tile');
+  if(t){const it=ITEMS[t.dataset.g][t.dataset.i];$('#dlgT').textContent=it[0];$('#dlgP').textContent=it[2];$('#dlgImg').src=IMG+it[1];$('#dlgImg').alt=it[0];dlg.showModal();return}
+  if(e.target.closest('#dlgX')||e.target===dlg)dlg.close();
+});
+
+const menu=$('#menu'),burger=$('#burger');
+const setMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+burger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
+menu.addEventListener('click',e=>{if(e.target.closest('a.l'))setMenu(false)});
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+// oznámení se samo skryje po uplynutí data (data-until)
+const n=$('#notice'),pragueDate=()=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Prague'}).format(new Date());
+if(pragueDate()<=n.dataset.until){n.hidden=false;$('#noticeX').onclick=()=>n.hidden=true}
+
+// stav otevřeno/zavřeno, Praha čas
+function hoursState(){
+  const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+  const dow={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.weekday],mins=+p.hour*60+ +p.minute;
+  const workday=dow>=1&&dow<=5,open=workday&&mins>=540&&mins<1020;
+  let next; if(open)next=null; else if(workday&&mins<540)next='dnes v 9:00'; else if(dow===5||dow===6||dow===0)next='v pondělí v 9:00'; else next='zítra v 9:00';
+  return {open,dow,next};
+}
+function paint(){
+  const h=hoursState(),st=$('#status');
+  st.classList.toggle('open',h.open);
+  $('#stTxt').textContent=h.open?'Otevřeno dnes do 17:00':'Teď zavřeno';
+  $('#stSub').textContent=h.open?'Zenklova 11/62, Praha 8':`Otevíráme ${h.next} · Zenklova 11/62`;
+  $('#barSt').innerHTML=h.open?'Otevřeno<br><span class="st">do 17:00</span>':'Zavřeno<br><span class="st">'+h.next+'</span>';
+  $$('#hours tr').forEach(r=>r.classList.toggle('today',+r.dataset.d===h.dow));
+}
+paint();setInterval(paint,60000);
+</script>
+</body>
+</html>
